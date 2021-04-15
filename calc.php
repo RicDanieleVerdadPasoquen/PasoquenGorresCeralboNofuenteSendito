@@ -2,36 +2,35 @@
 <head><title>Calculation Result</title></head>
 <body>
     <?php
-        # test if input is_numeric
-        if(is_numeric($var1))(is_numeric($var1)){
-            $var1 = ($_POST ['$result']);
-            $var2 = ($_POST ['$result']);
-            # test if calc is not null
-            if(isset($_POST['calc']){
-                echo = $_POST['calc'];
-                # switch statement for value of calc
-                switch($calc){
+
+        if(isset($_POST['val1'], $_POST['val2'])){
+            $var1=$_POST['val1'];
+            $var2=$_POST['val2'];
+
+            if(is_numeric($var1 & $var2)){
+
+                switch($_POST['calc']){
                     case "add":
-                        echo $var1 + $var2 = $result;
+                        echo "Calculation Result: ", $var1 + $var2;
                     break;
 
                     case "sub":
-                        echo $var1 - $var2 = $result;
+                        echo "Calculation Result: ", $var1 - $var2;
                     break;
 
                     case "mul":
-                            echo $var1 * $var2 = $result;
+                            echo "Calculation Result: ", $var1 * $var2;
                     break;
 
                     case "div":
-                            echo $var1 / $var2 = $result;
+                            echo "Calculation Result: ", $var1 / $var2;
                     break;
                     
                 }
-                echo "Calculation result: $result";
             }
         }
-        else{ echo "Invalid entry - please retry"; }
+        else
+        { echo "Invalid entry - please retry";}
     ?>
 </body>
 </html>
